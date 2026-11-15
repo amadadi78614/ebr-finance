@@ -1,96 +1,106 @@
-// Finance & Accounting EBR content. Source: May/June 2026 baseline (previous EBR sites cwipebr and ebrfa).
-// H1 FY27 results still to be refreshed.
+// Finance & Accounting EBR. Source: F&A baseline (May/June 2026) from the previous F&A AI Command Centre (ebrfa) and cwipebr.
+// H1 FY27 results to be refreshed from the latest F&A MBR / FNA deck.
 const CONFIG = {
   key: 'finance',
   domain: 'Finance & Accounting',
-  title: 'Finance & Accounting Executive Business Review',
   period: 'H1 FY27',
-  accent: '#4f46e5',
-  source: 'Source: May/June 2026 baseline · H1 FY27 results to be refreshed',
+  accent: '#8b5cf6',
+  accent2: '#ec4899',
+  source: 'F&A baseline May/June 2026 · H1 FY27 results to be refreshed',
   tabs: [
     {
-      id: 'highlights',
-      label: 'Highlights',
-      title: 'Highlights',
-      sub: 'May/June 2026 baseline · to be refreshed with H1 FY27 results',
+      id: 'highlights', label: 'Highlights', title: 'A faster, more controlled finance function',
       blocks: [
         {
-          type: 'kpis',
-          items: [
-            { value: 'Complete', label: 'FY26 year-end closure', note: 'As reported' },
-            { value: '6+', label: 'Automation initiatives', note: 'Delivery status to confirm' },
-            { value: 'Live', label: 'Cash flow analytics support', note: 'As reported' },
-            { value: 'Concluded', label: 'FAM system changes', note: 'System stabilisation' },
+          type: 'hero', items: [
+            { value: 'Closed', label: 'FY26 year-end', sub: 'As reported', tone: 'good' },
+            { value: '6+', label: 'Automation initiatives', sub: 'Reporting · matching · payments' },
+            { value: '~616h', label: 'Hours saved per year', sub: 'SLA reporting + payments (estimate)', detail: { rows: [['SLA reporting bot', '~416 hours per year'], ['All Payments bot', '~200 hours per year']] } },
+            { value: '30min', label: 'Payment run target', sub: 'From 4 hours', tone: 'good' },
           ],
         },
         {
-          type: 'steps', span: 8, title: 'Finance transformation streams',
+          type: 'cards', span: 8, cols: 3, title: 'Transformation streams · click for detail',
           items: [
-            { title: 'Reporting', points: ['SLA reporting', 'All Payments report', 'Open GL extraction and ageing'] },
-            { title: 'Reconciliation', points: ['Debit order matching', 'PayPro consolidation', 'Refund matching'] },
-            { title: 'Assurance', points: ['System risk closure', 'OPEX audits', 'Control exceptions'] },
+            { icon: 'FileBarChart', name: 'Reporting', line: 'SLA reporting · All Payments report · open GL ageing', detail: { points: ['SLA reporting automated across F&A towers', 'All Payments report', 'Open GL extraction and ageing'] } },
+            { icon: 'GitCompareArrows', name: 'Reconciliation', line: 'Debit orders · PayPro · refunds', detail: { points: ['Debit order matching', 'PayPro consolidation', 'Refund matching'] } },
+            { icon: 'ShieldCheck', name: 'Assurance', line: 'System risk · OPEX audits · control exceptions', detail: { points: ['System risk closure', 'OPEX audits', 'Control exceptions', 'FAM system changes concluded'] } },
           ],
         },
         {
-          type: 'asks', span: 4, title: 'Decisions requested from Telkom', note: 'Owners and dates to agree',
-          items: ['Confirm close duration and open exceptions.', 'Agree the benefit baseline for each automation.', 'Confirm cash flow forecast accuracy measure.'],
-        },
-        {
-          type: 'steps', span: 12, title: 'How benefits will be measured',
-          items: [
-            { title: 'Time', text: 'Reporting turnaround.' },
-            { title: 'Effort', text: 'Manual hours avoided.' },
-            { title: 'Control', text: 'Errors and resolution time.' },
-            { title: 'Value', text: 'Benefits validated with Finance.' },
+          type: 'rings', span: 4, title: 'Portfolio status', items: [
+            { pct: 20, value: '1', label: 'Delivered', color: '#34d399' },
+            { pct: 60, value: '3', label: 'In flight', color: 'accent' },
+            { pct: 20, value: '1', label: 'Pipeline', color: 'accent2' },
           ],
         },
       ],
     },
     {
-      id: 'rpa',
-      label: 'Transformation and RPA',
-      title: 'Transformation and RPA',
-      sub: 'F&A automation portfolio',
+      id: 'rpa', label: 'Automation', title: 'Five bots across reporting, payments and matching',
       blocks: [
         {
-          type: 'kpis',
+          type: 'cards', span: 12, cols: 5, rows: 3, title: 'Automation portfolio · click for detail',
           items: [
-            { value: '~416 h', label: 'SLA reporting hours saved per year', note: 'Estimate' },
-            { value: '4 h → 30 min', label: 'Payment run cycle', note: 'All Payments bot target' },
-            { value: '−60%', label: 'Debit order open items', note: 'Estimated reduction', trend: 'down' },
-            { value: '< 2 months', label: 'Open item ageing target' },
+            { icon: 'FileBarChart', name: 'SLA reporting bot', line: 'Daily and weekly SLA reports', metric: '~416 h/yr', status: 'progress', detail: { text: 'Removes about 8 hours of manual compilation per week. Consistent format, no transcription errors.' } },
+            { icon: 'Banknote', name: 'All Payments bot', line: 'Validation, EFT release, remittances', metric: '4h → 30min', status: 'progress', detail: { text: 'Fraud pre-screening on every payment run.' } },
+            { icon: 'GitCompareArrows', name: 'Debit order matching', line: 'Mandate · bank · GL', metric: '−60% backlog', status: 'progress', detail: { text: 'Three-way match; only exceptions need review. Estimated 60% reduction in open items.' } },
+            { icon: 'Receipt', name: 'VAT correction', line: 'Checks VAT coding before posting', metric: '0 reclasses', status: 'delivered', detail: { text: 'Rules-based validation against SARS requirements on AP invoices.' } },
+            { icon: 'Eraser', name: 'Open item reduction', line: 'Weekly GL matching runs', metric: '<2 months', status: 'planned', detail: { text: 'Pattern-based matching across bank statements, journals and sub-ledgers, with audit trail.' } },
           ],
         },
         {
-          type: 'list', span: 12, rows: 2, title: 'Automation portfolio',
+          type: 'shift', span: 12, rows: 2, title: 'What changes',
+          items: [{ label: 'Payment run cycle', from: '4 hours', to: '<30 min' }, { label: 'Weekly SLA report compilation', from: '8 hours', to: 'Automated' }],
+        },
+      ],
+    },
+    {
+      id: 'ai', label: 'AI opportunities', title: 'An agentic finance workforce, with people in control',
+      blocks: [
+        {
+          type: 'stairs', span: 5, rows: 3, title: 'F&A AI maturity', current: 2, target: 4, targetLabel: 'Ambition',
+          levels: ['Reactive', 'Managed', 'Automated', 'Predictive', 'Agentic'],
+          footnote: 'Today: between automated and predictive (level 3.5).',
+        },
+        {
+          type: 'stepper', span: 7, rows: 3, title: 'Flagship pilot · Reconciliation agent', note: 'Proposed · not live',
+          steps: [
+            { name: 'Ingest', icon: 'Database', title: 'Read bank, GL and sub-ledgers', points: ['Bank statements', 'Journals', 'Debit orders'] },
+            { name: 'Match', icon: 'GitCompareArrows', title: 'Match the obvious automatically', points: ['Rules first', 'Pattern matching'] },
+            { name: 'Investigate', icon: 'Search', title: 'Investigate what does not match', points: ['Explains the break', 'Attaches evidence'] },
+            { name: 'Propose', icon: 'Lightbulb', title: 'Propose the clearing entry', points: ['Suggested journal', 'Confidence score'] },
+            { name: 'Approve', icon: 'UserCheck', title: 'Accountant approves', points: ['Human decision', 'Segregation of duties'] },
+            { name: 'Evidence', icon: 'FileCheck2', title: 'Post and file audit evidence', points: ['Audit trail', 'Ageing below 2 months'] },
+          ],
+        },
+        {
+          type: 'cards', span: 12, cols: 5, rows: 2, agent: true, title: 'Agent opportunities · click for detail',
           items: [
-            { title: 'SLA reporting bot', text: 'Generates and distributes daily and weekly SLA reports across F&A towers. Removes about 8 hours of manual work per week.', metric: '~416 h/yr', status: 'inflight' },
-            { title: 'All Payments bot', text: 'Payment run validation, EFT release and remittances, with fraud pre-screening on every run.', metric: '~200 h/yr', status: 'inflight' },
-            { title: 'Debit order matching bot', text: 'Three-way match of mandates, bank statements and GL postings. Only exceptions need review.', metric: '−60% backlog', status: 'inflight' },
-            { title: 'VAT correction automation', text: 'Rules-based check of VAT coding on AP invoices before GL posting.', metric: 'No VAT reclassifications', status: 'delivered' },
-            { title: 'Open item reduction bot', text: 'Matches unreconciled GL items across bank statements, journals and sub-ledgers. Weekly runs with audit trail.', metric: '< 2 months ageing', status: 'pipeline' },
+            { icon: 'Wallet', name: 'Cashflow agent', line: '13-week liquidity forecast', status: 'proposed', detail: { rows: [['Output', 'Rolling cash forecast with drivers'], ['Measure', 'Forecast accuracy']] } },
+            { icon: 'GitCompareArrows', name: 'Reconciliation agent', line: 'Matching and exceptions', status: 'proposed', detail: { rows: [['Output', 'Cleared items, explained breaks'], ['Measure', 'Open item ageing']] } },
+            { icon: 'ShieldCheck', name: 'Audit agent', line: 'Controls and evidence packs', status: 'proposed', detail: { rows: [['Output', 'Evidence aligned to the control framework'], ['Measure', 'Control coverage']] } },
+            { icon: 'Banknote', name: 'Payments agent', line: 'Validation and fraud signals', status: 'proposed', detail: { rows: [['Output', 'Risk-scored payment runs'], ['Measure', 'Exceptions caught pre-release']] } },
+            { icon: 'Presentation', name: 'CFO insight agent', line: 'Board-pack commentary', status: 'proposed', detail: { rows: [['Output', 'Draft narrative from validated metrics'], ['Measure', 'Preparation time']] } },
           ],
         },
       ],
     },
     {
-      id: 'way-forward',
-      label: 'Way forward',
-      title: 'FY27 roadmap',
-      sub: 'By quarter',
+      id: 'next', label: 'Way forward', title: 'FY27 roadmap, quarter by quarter',
       blocks: [
         {
-          type: 'steps', span: 12, rows: 2, title: 'FY27 roadmap',
+          type: 'waves', span: 8, rows: 2, title: 'Roadmap',
           items: [
-            { period: 'Q1 · Jul–Sep 2026', title: 'Reporting', points: ['SLA report automation', 'Open GL ageing reports', 'Open item campaign launch'] },
-            { period: 'Q2 · Oct–Dec 2026', title: 'Payments and matching', points: ['All Payments bot', 'Debit order matching', 'Cash flow and KPI dashboards'] },
-            { period: 'Q3 · Jan–Mar 2027', title: 'Predictive', points: ['13-week cash flow forecast', 'Reconciliation agent', 'Audit evidence pack'] },
-            { period: 'Q4 · Apr–Jun 2027', title: 'Agent-assisted operations', points: ['Agents for cash flow, payments and audit', 'Automated management reporting', 'AI-assisted FY27 year-end close'] },
+            { when: 'Q1 · Jul–Sep', name: 'Reporting', items: ['SLA report automation', 'Open GL ageing reports', 'Open item campaign'] },
+            { when: 'Q2 · Oct–Dec', name: 'Payments and matching', items: ['All Payments bot', 'Debit order matching', 'Cash flow dashboards'] },
+            { when: 'Q3 · Jan–Mar', name: 'Predictive', items: ['13-week cash forecast', 'Reconciliation agent', 'Audit evidence pack'] },
+            { when: 'Q4 · Apr–Jun', name: 'Agent-assisted', items: ['Cash, payments and audit agents', 'Automated reporting', 'AI-assisted year-end'] },
           ],
         },
         {
-          type: 'asks', span: 12, title: 'Next steps',
-          items: ['Refresh H1 FY27 results for each automation.', 'Confirm Q2 delivery dates for All Payments and debit order matching.', 'Agree the pilot for cash flow forecasting.'],
+          type: 'asks', span: 4, rows: 2, title: 'Decisions requested from Telkom',
+          items: ['Agree the benefit baseline per automation', 'Confirm Q2 dates: payments and debit orders', 'Sponsor the reconciliation agent pilot'],
         },
       ],
     },
