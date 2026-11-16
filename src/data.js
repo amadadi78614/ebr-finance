@@ -4,8 +4,8 @@ const CONFIG = {
   key: 'finance',
   domain: 'Finance & Accounting',
   period: 'H1 FY27',
-  accent: '#8b5cf6',
-  accent2: '#ec4899',
+  accent: '#009FE3',
+  accent2: '#FF6F4D',
   source: 'F&A baseline May/June 2026 · H1 FY27 results to be refreshed',
   tabs: [
     {
@@ -53,7 +53,7 @@ const CONFIG = {
         },
         {
           type: 'rings', span: 4, title: 'Portfolio status', items: [
-            { pct: 20, value: '1', label: 'Delivered', color: '#34d399' },
+            { pct: 20, value: '1', label: 'Delivered', color: '#0E9F6E' },
             { pct: 60, value: '3', label: 'In flight', color: 'accent' },
             { pct: 20, value: '1', label: 'Pipeline', color: 'accent2' },
           ],
