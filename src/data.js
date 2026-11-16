@@ -9,6 +9,30 @@ const CONFIG = {
   source: 'F&A baseline May/June 2026 · H1 FY27 results to be refreshed',
   tabs: [
     {
+      id: 'since', label: 'Since last EBR', title: 'Since the May/June 2026 EBR',
+      blocks: [
+        {
+          type: 'hero', items: [
+            { value: '1', label: 'Automation delivered', sub: 'VAT correction', tone: 'good' },
+            { value: '3', label: 'Bots in flight', sub: 'SLA reporting · payments · debit orders' },
+            { value: 'Q2', label: 'Payments and matching due', sub: 'Oct–Dec 2026' },
+            { value: 'Pending', label: 'H1 FY27 results', sub: 'F&A MBR update awaited', tone: 'warn' },
+          ],
+        },
+        {
+          type: 'journey', span: 12, rows: 4, title: 'Commitments from the last EBR · click a row', thenLabel: 'Last EBR · May/June 2026', nowLabel: 'Now · H1 FY27',
+          items: [
+            { icon: 'Receipt', label: 'VAT correction automation', then: 'Delivered', now: 'Live', status: 'live' },
+            { icon: 'FileBarChart', label: 'SLA reporting bot', then: 'Q1 commitment', now: 'In flight', tone: 'warn', status: 'confirm' },
+            { icon: 'CalendarClock', label: 'Open GL ageing reports', then: 'Q1 commitment', now: 'To confirm', tone: 'muted', status: 'confirm' },
+            { icon: 'Banknote', label: 'All Payments bot', then: 'Q2 commitment', now: 'In flight', tone: 'warn', status: 'progress' },
+            { icon: 'GitCompareArrows', label: 'Debit order matching', then: 'Q2 commitment', now: 'In flight', tone: 'warn', status: 'progress' },
+            { icon: 'Wallet', label: 'Cash flow dashboards', then: 'Q2 commitment', now: 'To confirm', tone: 'muted', status: 'confirm' },
+          ],
+        },
+      ],
+    },
+    {
       id: 'highlights', label: 'Highlights', title: 'A faster, more controlled finance function',
       blocks: [
         {
