@@ -80,35 +80,86 @@ const CONFIG = {
       ],
     },
     {
-      id: 'ai', label: 'AI opportunities', title: 'An agentic finance workforce, with people in control',
-      blocks: [
+      "id": "ai",
+      "label": "AI journey",
+      "title": "WNS, part of Capgemini, is taking Telkom on the AI journey",
+      "blocks": [
         {
-          type: 'stairs', span: 5, rows: 3, title: 'F&A AI maturity', current: 2, target: 4, targetLabel: 'Ambition',
-          levels: ['Reactive', 'Managed', 'Automated', 'Predictive', 'Agentic'],
-          footnote: 'Today: between automated and predictive (level 3.5).',
+          "type": "hero",
+          "items": [
+            {
+              "value": "ML",
+              "label": "Forecast model in use",
+              "sub": "Enhanced logic being validated",
+              "tone": "good"
+            },
+            {
+              "value": "Daily",
+              "label": "Committed cash view",
+              "sub": "In-system vs model forecast",
+              "tone": "good"
+            },
+            {
+              "value": "6",
+              "label": "Finance analytics initiatives",
+              "sub": "Receipts · AR · dealer commission · more"
+            },
+            {
+              "value": "Next",
+              "label": "Dealer commission accuracy",
+              "sub": "Automation first, then AI"
+            }
+          ]
         },
         {
-          type: 'stepper', span: 7, rows: 3, title: 'Flagship pilot · Reconciliation agent', note: 'Proposed · not live',
-          steps: [
-            { name: 'Ingest', icon: 'Database', title: 'Read bank, GL and sub-ledgers', points: ['Bank statements', 'Journals', 'Debit orders'] },
-            { name: 'Match', icon: 'GitCompareArrows', title: 'Match the obvious automatically', points: ['Rules first', 'Pattern matching'] },
-            { name: 'Investigate', icon: 'Search', title: 'Investigate what does not match', points: ['Explains the break', 'Attaches evidence'] },
-            { name: 'Propose', icon: 'Lightbulb', title: 'Propose the clearing entry', points: ['Suggested journal', 'Confidence score'] },
-            { name: 'Approve', icon: 'UserCheck', title: 'Accountant approves', points: ['Human decision', 'Segregation of duties'] },
-            { name: 'Evidence', icon: 'FileCheck2', title: 'Post and file audit evidence', points: ['Audit trail', 'Ageing below 2 months'] },
-          ],
+          "type": "track",
+          "span": 12,
+          "rows": 2,
+          "title": "How we take AI from idea to value · where cash forecasting is today",
+          "at": 2,
+          "flag": "cash forecasting"
         },
         {
-          type: 'cards', span: 12, cols: 5, rows: 2, agent: true, title: 'Agent opportunities · click for detail',
-          items: [
-            { icon: 'Wallet', name: 'Cashflow agent', line: '13-week liquidity forecast', status: 'proposed', detail: { rows: [['Output', 'Rolling cash forecast with drivers'], ['Measure', 'Forecast accuracy']] } },
-            { icon: 'GitCompareArrows', name: 'Reconciliation agent', line: 'Matching and exceptions', status: 'proposed', detail: { rows: [['Output', 'Cleared items, explained breaks'], ['Measure', 'Open item ageing']] } },
-            { icon: 'ShieldCheck', name: 'Audit agent', line: 'Controls and evidence packs', status: 'proposed', detail: { rows: [['Output', 'Evidence aligned to the control framework'], ['Measure', 'Control coverage']] } },
-            { icon: 'Banknote', name: 'Payments agent', line: 'Validation and fraud signals', status: 'proposed', detail: { rows: [['Output', 'Risk-scored payment runs'], ['Measure', 'Exceptions caught pre-release']] } },
-            { icon: 'Presentation', name: 'CFO insight agent', line: 'Board-pack commentary', status: 'proposed', detail: { rows: [['Output', 'Draft narrative from validated metrics'], ['Measure', 'Preparation time']] } },
-          ],
-        },
-      ],
+          "type": "waves",
+          "big": true,
+          "span": 12,
+          "rows": 4,
+          "title": "Done, under way, next 90 days",
+          "items": [
+            {
+              "when": "Done · proven with Telkom",
+              "name": "Built and in use",
+              "tone": "done",
+              "items": [
+                "Machine-learning cash forecasting model",
+                "Daily committed-cash view against the forecast",
+                "Receipts allocated by customer segment",
+                "AR split into open and cleared items"
+              ]
+            },
+            {
+              "when": "Under way",
+              "name": "Being delivered now",
+              "tone": "doing",
+              "items": [
+                "Enhanced forecasting logic being validated",
+                "Consumer dealer commission reporting automation",
+                "Sales hierarchy tool"
+              ]
+            },
+            {
+              "when": "Next 90 days",
+              "name": "What we will prove next",
+              "tone": "next",
+              "items": [
+                "Embed the validated forecast in the monthly cycle",
+                "Measure forecast accuracy month on month",
+                "Define the financial close copilot use case with F&A"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       id: 'next', label: 'Way forward', title: 'FY27 roadmap, quarter by quarter',
