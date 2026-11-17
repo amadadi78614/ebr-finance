@@ -61,6 +61,41 @@ const CONFIG = {
       ],
     },
     {
+      id: 'analytics', owner: { name: "Dani Viljoen", role: "WNS Analytics" }, label: 'Analytics', title: 'A data-driven finance engine',
+      blocks: [
+        {
+          type: 'cards', span: 8, rows: 3, cols: 2, list: true, title: 'WNS Analytics · six months in review · click for detail',
+          items: [
+            { icon: 'TrendingUp', name: 'Prediction model', line: 'Machine-learning forecast', status: 'progress', statusText: 'Validating', team: 'Analytics', detail: { text: 'Updated machine-learning logic to improve forecasting; enhanced logic now being validated.', rows: [['Value', 'More reliable forecast inputs']] } },
+            { icon: 'Wallet', name: 'System forecasting', line: 'Daily committed cash vs forecast', team: 'Analytics', detail: { text: 'Daily view of logged-unpaid, paid and total committed cash against the model forecast.', rows: [['Value', 'Earlier visibility of committed cash']] } },
+            { icon: 'Receipt', name: 'Receipts allocation', line: 'Allocation by customer segment', team: 'Analytics', detail: { rows: [['Value', 'Fewer misallocations, less reconciliation effort']] } },
+            { icon: 'Scale', name: 'AR open vs cleared', line: 'Outstanding-balance visibility', team: 'Analytics', detail: { rows: [['Value', 'Stronger collections and working capital decisions']] } },
+            { icon: 'FileBarChart', name: 'Dealer commission', line: 'Faster, more accurate provisions', team: 'Analytics', detail: { rows: [['Value', 'Immediate efficiency, longer-term AI potential']] } },
+            { icon: 'Network', name: 'Sales hierarchy tool', line: 'User hierarchy allocation data', team: 'Analytics', detail: { rows: [['Value', 'Accurate allocation of dealer sales']] } },
+          ],
+        },
+        {
+          type: 'rings', span: 4, rows: 3, size: 92, title: 'Data maturity · next frontier is prescriptive and cognitive',
+          items: [
+            { pct: 100, value: '100%', label: 'Descriptive to predictive', sub: 'Hindsight, insight, foresight' },
+            { pct: 20, value: '20%', label: 'Prescriptive', sub: 'What should we do?', color: 'accent2' },
+            { pct: 5, value: '5%', label: 'Cognitive', sub: 'Controlled execution', color: 'accent2' },
+          ],
+        },
+        {
+          type: 'tiles', span: 12, rows: 1, cols: 6, title: 'Maintained · finance operations and control',
+          items: [
+            { value: 'Travel', label: 'Spend and activity trends', tone: 'green' },
+            { value: 'TBI', label: 'Status and deadlines', tone: 'green' },
+            { value: 'AR recons', label: 'Ageing and unreconciled items', tone: 'green' },
+            { value: 'OMS', label: 'Volumes and turnaround', tone: 'green' },
+            { value: 'TOMS', label: 'Mailbox response times', tone: 'green' },
+            { value: 'SLA', label: 'F&A and HR performance', tone: 'green' },
+          ],
+        },
+      ],
+    },
+    {
       id: 'rpa', owner: {   "name": "Mohamed Nomani",   "role": "WNS Transformation · part of Capgemini" }, label: 'Automation', title: 'Five bots across reporting, payments and matching',
       blocks: [
         {
@@ -177,7 +212,7 @@ const CONFIG = {
         },
         {
           type: 'asks', span: 4, rows: 2, title: 'Decisions requested from Telkom',
-          items: ['Agree the benefit baseline per automation', 'Confirm Q2 dates: payments and debit orders', 'Sponsor the reconciliation agent pilot'],
+          items: ['Agree the benefit baseline per automation', 'Confirm Q2 dates: payments and debit orders', 'Enable Microsoft enterprise AI access for the Shared Services team', 'Agree the AI-on-reconciliation use case'],
         },
       ],
     },
