@@ -61,7 +61,7 @@ const CONFIG = {
       ],
     },
     {
-      id: 'rpa', label: 'Automation', title: 'Five bots across reporting, payments and matching',
+      id: 'rpa', owner: {   "name": "Mohamed Nomani",   "role": "WNS Transformation · part of Capgemini" }, label: 'Automation', title: 'Five bots across reporting, payments and matching',
       blocks: [
         {
           type: 'cards', span: 12, cols: 5, rows: 3, title: 'Automation portfolio · click for detail',
@@ -81,33 +81,37 @@ const CONFIG = {
     },
     {
       "id": "ai",
-      "label": "AI journey",
-      "title": "WNS, part of Capgemini, is taking Telkom on the AI journey",
+      "label": "Transformation and AI",
+      "owner": {
+        "name": "Mohamed Nomani",
+        "role": "WNS Transformation · part of Capgemini"
+      },
+      "title": "From payment bots to AI-assisted finance",
       "blocks": [
         {
           "type": "hero",
           "items": [
             {
-              "value": "ML",
-              "label": "Forecast model in use",
-              "sub": "Enhanced logic being validated",
+              "value": "5",
+              "label": "Bots in the portfolio",
+              "sub": "Reporting, payments, matching, VAT",
               "tone": "good"
             },
             {
-              "value": "Daily",
-              "label": "Committed cash view",
-              "sub": "In-system vs model forecast",
+              "value": "0",
+              "label": "VAT reclasses",
+              "sub": "VAT correction bot delivered",
               "tone": "good"
             },
             {
-              "value": "6",
-              "label": "Finance analytics initiatives",
-              "sub": "Receipts · AR · dealer commission · more"
+              "value": "4h → 30m",
+              "label": "Payment run target",
+              "sub": "All Payments bot in build"
             },
             {
               "value": "Next",
-              "label": "Dealer commission accuracy",
-              "sub": "Automation first, then AI"
+              "label": "Reconciliation with AI",
+              "sub": "Rules first, then AI on exceptions"
             }
           ]
         },
@@ -115,26 +119,23 @@ const CONFIG = {
           "type": "track",
           "span": 12,
           "rows": 2,
-          "title": "How we take AI from idea to value · where cash forecasting is today",
-          "at": 2,
-          "flag": "cash forecasting"
+          "title": "Automation to AI, step by step · where AI-assisted reconciliation is today",
+          "at": 1
         },
         {
           "type": "waves",
           "big": true,
           "span": 12,
           "rows": 4,
-          "title": "Done, under way, next 90 days",
+          "title": "WNS Transformation portfolio · done, under way, next 90 days",
           "items": [
             {
-              "when": "Done · proven with Telkom",
-              "name": "Built and in use",
+              "when": "Done · live at Telkom",
+              "name": "Delivered",
               "tone": "done",
               "items": [
-                "Machine-learning cash forecasting model",
-                "Daily committed-cash view against the forecast",
-                "Receipts allocated by customer segment",
-                "AR split into open and cleared items"
+                "VAT correction bot live",
+                "Cash forecasting model with Analytics"
               ]
             },
             {
@@ -142,9 +143,10 @@ const CONFIG = {
               "name": "Being delivered now",
               "tone": "doing",
               "items": [
-                "Enhanced forecasting logic being validated",
-                "Consumer dealer commission reporting automation",
-                "Sales hierarchy tool"
+                "SLA reporting bot (~416 hours a year)",
+                "All Payments bot: validation and EFT release",
+                "Debit order matching (mandate, bank, GL)",
+                "Open item reduction runs"
               ]
             },
             {
@@ -152,9 +154,9 @@ const CONFIG = {
               "name": "What we will prove next",
               "tone": "next",
               "items": [
-                "Embed the validated forecast in the monthly cycle",
-                "Measure forecast accuracy month on month",
-                "Define the financial close copilot use case with F&A"
+                "Define AI on reconciliation exceptions with F&A",
+                "Prove it on one bank account",
+                "Measure open-item ageing"
               ]
             }
           ]
