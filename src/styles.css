@@ -438,3 +438,14 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-off
 .img-block{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;border-radius:12px;overflow:hidden}
 .img-block img{max-width:100%;max-height:100%;object-fit:contain}
 @media (max-width:1440px){.dock .source{display:none}}
+.agenda.many{gap:6px}
+.agenda.many .ag-row{padding:0 20px;gap:16px}
+.agenda.many .ag-n{font-size:22px;width:40px}
+.agenda.many .ag-ico{width:38px;height:38px;border-radius:11px}
+.agenda.many .ag-ico svg{width:20px;height:20px}
+.agenda.many .ag-txt b{font-size:18px}
+.agenda.many .ag-txt small{font-size:12.5px}
+.agenda.many .ag-who{font-size:12px;padding:4px 10px}
+.steps-nav button{white-space:nowrap}
+@media (max-width:1440px){.steps-nav{overflow-x:auto;scrollbar-width:none}.steps-nav::-webkit-scrollbar{display:none}}
+.agenda.many .ag-txt{flex-direction:row;align-items:baseline;gap:14px}.agenda.many .ag-row{min-height:0}

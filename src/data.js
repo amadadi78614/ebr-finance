@@ -9,6 +9,10 @@ const CONFIG = {
   source: 'F&A baseline May/June 2026 · H1 FY27 results to be refreshed',
   tabs: [
     {
+      id: 'agenda', label: 'Agenda', title: "Finance and Accounting \u00b7 Executive Business Review",
+      blocks: [ { type: 'agenda', span: 12, rows: 6, items: [{"label": "Since last EBR", "icon": "History", "tab": "since", "line": "Commitments from May/June 2026, and where each stands now"}, {"label": "Highlights", "icon": "Star", "tab": "highlights", "line": "A faster, more controlled finance function"}, {"label": "Analytics", "icon": "BarChart3", "tab": "analytics", "line": "A data-driven finance engine", "who": "Capgemini Analytics"}, {"label": "Automation", "icon": "Bot", "tab": "rpa", "line": "Five bots across reporting, payments and matching", "who": "Capgemini Transformation"}, {"label": "Transformation and AI", "icon": "Sparkles", "tab": "ai", "line": "From payment bots to AI-assisted finance", "who": "Capgemini Transformation"}, {"label": "Way forward", "icon": "Route", "tab": "next", "line": "FY27 roadmap, quarter by quarter, and decisions"}] } ],
+    },
+    {
       id: 'since', label: 'Since last EBR', title: 'Since the May/June 2026 EBR',
       blocks: [
         {
