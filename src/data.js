@@ -4,8 +4,8 @@ const CONFIG = {
   key: 'finance',
   domain: 'Finance & Accounting',
   period: 'H1 FY27',
-  accent: '#009FE3',
-  accent2: '#FF6F4D',
+  accent: '#0070AD',
+  accent2: '#009FE3',
   source: 'F&A baseline May/June 2026 · H1 FY27 results to be refreshed',
   tabs: [
     {
@@ -61,10 +61,10 @@ const CONFIG = {
       ],
     },
     {
-      id: 'analytics', owner: { name: "Dani Viljoen", role: "WNS Analytics" }, label: 'Analytics', title: 'A data-driven finance engine',
+      id: 'analytics', owner: { name: "Dani Viljoen", role: "Capgemini Analytics" }, label: 'Analytics', title: 'A data-driven finance engine',
       blocks: [
         {
-          type: 'cards', span: 8, rows: 3, cols: 2, list: true, title: 'WNS Analytics · six months in review · click for detail',
+          type: 'cards', span: 8, rows: 3, cols: 2, list: true, title: 'Capgemini Analytics · six months in review · click for detail',
           items: [
             { icon: 'TrendingUp', name: 'Prediction model', line: 'Machine-learning forecast', status: 'progress', statusText: 'Validating', team: 'Analytics', detail: { text: 'Updated machine-learning logic to improve forecasting; enhanced logic now being validated.', rows: [['Value', 'More reliable forecast inputs']] } },
             { icon: 'Wallet', name: 'System forecasting', line: 'Daily committed cash vs forecast', team: 'Analytics', detail: { text: 'Daily view of logged-unpaid, paid and total committed cash against the model forecast.', rows: [['Value', 'Earlier visibility of committed cash']] } },
@@ -96,7 +96,7 @@ const CONFIG = {
       ],
     },
     {
-      id: 'rpa', owner: {   "name": "Mohamed Nomani",   "role": "WNS Transformation · part of Capgemini" }, label: 'Automation', title: 'Five bots across reporting, payments and matching',
+      id: 'rpa', owner: {   "name": "Mohamed Nomani",   "role": "Capgemini Transformation" }, label: 'Automation', title: 'Five bots across reporting, payments and matching',
       blocks: [
         {
           type: 'cards', span: 12, cols: 5, rows: 3, title: 'Automation portfolio · click for detail',
@@ -119,7 +119,7 @@ const CONFIG = {
       "label": "Transformation and AI",
       "owner": {
         "name": "Mohamed Nomani",
-        "role": "WNS Transformation · part of Capgemini"
+        "role": "Capgemini Transformation"
       },
       "title": "From payment bots to AI-assisted finance",
       "blocks": [
@@ -162,7 +162,7 @@ const CONFIG = {
           "big": true,
           "span": 12,
           "rows": 4,
-          "title": "WNS Transformation portfolio · done, under way, next 90 days",
+          "title": "Capgemini Transformation portfolio · done, under way, next 90 days",
           "items": [
             {
               "when": "Done · live at Telkom",
