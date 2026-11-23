@@ -1,222 +1,180 @@
-// Finance & Accounting EBR. Source: F&A baseline (May/June 2026) from the previous F&A AI Command Centre (ebrfa) and cwipebr.
-// H1 FY27 results to be refreshed from the latest F&A MBR / FNA deck.
+// Finance & Accounting EBR. Source: Telkom placemat "F&A Executive Business Review – FY27 H2"
+// (Claude Naidu, v3, 23 Nov 2026): H1 highlights, H2 key focus areas, business-led transformation
+// (RPA/automation status) and strategic enablement (analytics).
 const CONFIG = {
   key: 'finance',
   domain: 'Finance & Accounting',
   period: 'H1 FY27',
   accent: '#0070AD',
   accent2: '#009FE3',
-  source: 'F&A baseline May/June 2026 · H1 FY27 results to be refreshed',
+  source: 'F&A EBR placemat · FY27 H1 review · H2 focus',
   tabs: [
     {
-      id: 'agenda', label: 'Agenda', title: "Finance and Accounting \u00b7 Executive Business Review",
-      blocks: [ { type: 'agenda', span: 12, rows: 6, items: [{"label": "Since last EBR", "icon": "History", "tab": "since", "line": "Commitments from May/June 2026, and where each stands now"}, {"label": "Highlights", "icon": "Star", "tab": "highlights", "line": "A faster, more controlled finance function"}, {"label": "Analytics", "icon": "BarChart3", "tab": "analytics", "line": "A data-driven finance engine", "who": "Capgemini Analytics"}, {"label": "Automation", "icon": "Bot", "tab": "rpa", "line": "Five bots across reporting, payments and matching", "who": "Capgemini Transformation"}, {"label": "Transformation and AI", "icon": "Sparkles", "tab": "ai", "line": "From payment bots to AI-assisted finance", "who": "Capgemini Transformation"}, {"label": "Way forward", "icon": "Route", "tab": "next", "line": "FY27 roadmap, quarter by quarter, and decisions"}] } ],
+      id: 'agenda', label: 'Agenda', title: 'Finance and Accounting · Executive Business Review',
+      blocks: [{
+        type: 'agenda', span: 12, rows: 6, items: [
+          { label: 'Since last EBR', icon: 'History', tab: 'since', line: 'Commitments from May/June 2026, and where each stands now' },
+          { label: 'H1 highlights', icon: 'Star', tab: 'highlights', line: 'Interim close, Touchless AP UAT, 58% of FAM backlog closed, audit findings closed' },
+          { label: 'H2 focus areas', icon: 'Target', tab: 'focus', line: 'SingleView balances, wholesale recons, recoverable works, R1 contracts' },
+          { label: 'Analytics', icon: 'BarChart3', tab: 'analytics', line: 'Bank balance, cash flow and SLA models live · AR recon tracker next', who: 'Capgemini Analytics' },
+          { label: 'Automation', icon: 'Bot', tab: 'rpa', line: 'Eight digital interventions: one completed, three in progress, four in pipeline', who: 'Capgemini Transformation' },
+          { label: 'Transformation and AI', icon: 'Sparkles', tab: 'ai', line: 'From batch-file bots to AI-assisted reconciliation', who: 'Capgemini Transformation' },
+          { label: 'Way forward', icon: 'Route', tab: 'next', line: 'H2 roadmap and decisions requested from Telkom' },
+        ],
+      }],
     },
     {
       id: 'since', label: 'Since last EBR', title: 'Since the May/June 2026 EBR',
       blocks: [
         {
           type: 'hero', items: [
-            { value: '1', label: 'Automation delivered', sub: 'VAT correction', tone: 'good' },
-            { value: '3', label: 'Bots in flight', sub: 'SLA reporting · payments · debit orders' },
-            { value: 'Q2', label: 'Payments and matching due', sub: 'Oct–Dec 2026' },
-            { value: 'Pending', label: 'H1 FY27 results', sub: 'F&A MBR update awaited', tone: 'warn' },
+            { value: '6', label: 'H1 highlights delivered', sub: 'Close, AP, FAM, recoverables, portal, audit', tone: 'good' },
+            { value: '58%', label: 'FAM incident backlog closed', sub: 'Lower operational risk', tone: 'good' },
+            { value: 'UAT done', label: 'Touchless AP invoice processing', sub: 'Ready for greater automation' },
+            { value: 'Closed', label: 'Business process audit findings', sub: 'Control environment strengthened', tone: 'good' },
           ],
         },
         {
           type: 'journey', span: 12, rows: 4, title: 'Commitments from the last EBR · click a row', thenLabel: 'Last EBR · May/June 2026', nowLabel: 'Now · H1 FY27',
           items: [
-            { icon: 'Receipt', label: 'VAT correction automation', then: 'Delivered', now: 'Live', status: 'live' },
-            { icon: 'FileBarChart', label: 'SLA reporting bot', then: 'Q1 commitment', now: 'In flight', tone: 'warn', status: 'confirm' },
-            { icon: 'CalendarClock', label: 'Open GL ageing reports', then: 'Q1 commitment', now: 'To confirm', tone: 'muted', status: 'confirm' },
-            { icon: 'Banknote', label: 'All Payments bot', then: 'Q2 commitment', now: 'In flight', tone: 'warn', status: 'progress' },
-            { icon: 'GitCompareArrows', label: 'Debit order matching', then: 'Q2 commitment', now: 'In flight', tone: 'warn', status: 'progress' },
-            { icon: 'Wallet', label: 'Cash flow dashboards', then: 'Q2 commitment', now: 'To confirm', tone: 'muted', status: 'confirm' },
+            { icon: 'Gauge', label: 'SLA reporting', then: 'Q1 commitment', now: 'F&A SLA dashboard live', status: 'live', detail: { text: 'Sectional performance tracking across F&A.' } },
+            { icon: 'Wallet', label: 'Cash flow dashboards', then: 'Q2 commitment', now: 'Bank balance and cash flow models live', status: 'live', detail: { text: 'Daily bank balance model automates the cash position; the cash flow statement model builds familiarity and user understanding.' } },
+            { icon: 'Banknote', label: 'All Payments', then: 'Q2 commitment', now: 'Batch files in progress', tone: 'warn', status: 'progress', detail: { text: 'All monthly payments batch files: improved accuracy and TAT saving over month-end.' } },
+            { icon: 'GitCompareArrows', label: 'Debit order matching', then: 'Q2 commitment', now: 'Debit order look-up in progress', tone: 'warn', status: 'progress', detail: { text: 'Increased flow from source, about 8 hours saved.' } },
+            { icon: 'CalendarClock', label: 'Open GL ageing reports', then: 'Q1 commitment', now: 'Age analysis extracts in pipeline', tone: 'muted', status: 'planned', detail: { text: 'SAP extract, format and centralise; supports client turnaround over peak periods.' } },
+            { icon: 'FileCheck2', label: 'Touchless AP invoice processing', then: 'Planned', now: 'UAT completed', status: 'live' },
           ],
         },
       ],
     },
     {
-      id: 'highlights', label: 'Highlights', title: 'A faster, more controlled finance function',
+      id: 'highlights', label: 'H1 highlights', title: 'H1: stronger governance, cleaner controls, more self-service',
       blocks: [
         {
-          type: 'hero', items: [
-            { value: 'Closed', label: 'FY26 year-end', sub: 'As reported', tone: 'good' },
-            { value: '6+', label: 'Automation initiatives', sub: 'Reporting · matching · payments' },
-            { value: '~616h', label: 'Hours saved per year', sub: 'SLA reporting + payments (estimate)', detail: { rows: [['SLA reporting bot', '~416 hours per year'], ['All Payments bot', '~200 hours per year']] } },
-            { value: '30min', label: 'Payment run target', sub: 'From 4 hours', tone: 'good' },
-          ],
-        },
-        {
-          type: 'cards', span: 8, cols: 3, title: 'Transformation streams · click for detail',
+          type: 'cards', span: 12, rows: 6, cols: 3, title: 'Highlights H1 · click for detail',
           items: [
-            { icon: 'FileBarChart', name: 'Reporting', line: 'SLA reporting · All Payments report · open GL ageing', detail: { points: ['SLA reporting automated across F&A towers', 'All Payments report', 'Open GL extraction and ageing'] } },
-            { icon: 'GitCompareArrows', name: 'Reconciliation', line: 'Debit orders · PayPro · refunds', detail: { points: ['Debit order matching', 'PayPro consolidation', 'Refund matching'] } },
-            { icon: 'ShieldCheck', name: 'Assurance', line: 'System risk · OPEX audits · control exceptions', detail: { points: ['System risk closure', 'OPEX audits', 'Control exceptions', 'FAM system changes concluded'] } },
-          ],
-        },
-        {
-          type: 'rings', span: 4, title: 'Portfolio status', items: [
-            { pct: 20, value: '1', label: 'Delivered', color: '#0E9F6E' },
-            { pct: 60, value: '3', label: 'In flight', color: 'accent' },
-            { pct: 20, value: '1', label: 'Pipeline', color: 'accent2' },
+            { icon: 'BookCheck', name: 'Interim closure', line: 'Governance and audit readiness', status: 'live', statusText: 'Done', detail: { text: 'Successful interim close: compliance, reporting integrity and timely resolution of audit requirements.' } },
+            { icon: 'FileCheck2', name: 'Touchless AP invoice processing', line: 'UAT completed', status: 'live', statusText: 'UAT done', detail: { text: 'Positions the business for greater automation, scalability and less manual intervention.' } },
+            { icon: 'Wrench', name: 'FAM incidents', line: '58% of the backlog resolved', status: 'progress', statusText: '58% closed', detail: { text: 'Lower operational risk and better control effectiveness, improving process stability and business continuity.' } },
+            { icon: 'HardHat', name: 'Recoverable works', line: 'Centralised visibility', status: 'live', statusText: 'Live', detail: { text: 'Proactive management of receivables and clearer operational accountability.' } },
+            { icon: 'LifeBuoy', name: 'Finance portal self-help', line: 'New self-service functions', status: 'live', statusText: 'Live', detail: { text: 'Better user experience, fewer support requests and higher operational efficiency.' } },
+            { icon: 'ShieldCheck', name: 'Risk management and compliance', line: 'Business process audit findings closed', status: 'live', statusText: 'Closed', detail: { text: 'Capgemini closed the business process audit findings, strengthening the control environment and compliance.' } },
           ],
         },
       ],
     },
     {
-      id: 'analytics', owner: { name: "Dani Viljoen", role: "Capgemini Analytics" }, label: 'Analytics', title: 'A data-driven finance engine',
+      id: 'focus', label: 'H2 focus', title: 'H2: trusted balances, automated recons, tighter spend',
       blocks: [
         {
-          type: 'cards', span: 8, rows: 3, cols: 2, list: true, title: 'Capgemini Analytics · six months in review · click for detail',
+          type: 'cards', span: 12, rows: 6, cols: 3, title: 'Key focus areas H2 · click for detail',
           items: [
-            { icon: 'TrendingUp', name: 'Prediction model', line: 'Machine-learning forecast', status: 'progress', statusText: 'Validating', team: 'Analytics', detail: { text: 'Updated machine-learning logic to improve forecasting; enhanced logic now being validated.', rows: [['Value', 'More reliable forecast inputs']] } },
-            { icon: 'Wallet', name: 'System forecasting', line: 'Daily committed cash vs forecast', team: 'Analytics', detail: { text: 'Daily view of logged-unpaid, paid and total committed cash against the model forecast.', rows: [['Value', 'Earlier visibility of committed cash']] } },
-            { icon: 'Receipt', name: 'Receipts allocation', line: 'Allocation by customer segment', team: 'Analytics', detail: { rows: [['Value', 'Fewer misallocations, less reconciliation effort']] } },
-            { icon: 'Scale', name: 'AR open vs cleared', line: 'Outstanding-balance visibility', team: 'Analytics', detail: { rows: [['Value', 'Stronger collections and working capital decisions']] } },
-            { icon: 'FileBarChart', name: 'Dealer commission', line: 'Faster, more accurate provisions', team: 'Analytics', detail: { rows: [['Value', 'Immediate efficiency, longer-term AI potential']] } },
-            { icon: 'Network', name: 'Sales hierarchy tool', line: 'User hierarchy allocation data', team: 'Analytics', detail: { rows: [['Value', 'Accurate allocation of dealer sales']] } },
+            { icon: 'Scale', name: 'SingleView balance report', line: 'Stabilise, validate, adopt', status: 'progress', detail: { text: 'Support stabilisation, validation and adoption of SingleView balance reporting as a critical source of financial insight.' } },
+            { icon: 'GitCompareArrows', name: 'Wholesale reconciliations', line: 'Automate', status: 'planned', detail: { text: 'Less manual effort and better financial accuracy. Revisit once SingleView and FAM balance reports are deployed.' } },
+            { icon: 'Plane', name: 'BTM rejection dashboard', line: 'Travel claims analytics', status: 'planned', detail: { text: 'Visibility of claim rejections and compliance trends to improve spend governance.' } },
+            { icon: 'HardHat', name: 'Recoverable works with regional SPOCs', line: 'Cross-functional accountability', status: 'progress', detail: { text: 'Improve recoverability and minimise unidentified balances that affect financial close.' } },
+            { icon: 'ClipboardCheck', name: 'Group Revenue Assurance alignment', line: 'Reports on time', status: 'progress', detail: { text: 'Timely reporting and more effective back-office resolution.' } },
+            { icon: 'FileMinus', name: 'R1 contracts', line: 'Reduce non-standard contracts', status: 'planned', detail: { text: 'Better procurement governance and compliance with strategic sourcing and contracting frameworks.' } },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'analytics', owner: { name: 'Dani Viljoen', role: 'Capgemini Analytics' }, label: 'Analytics', title: 'Analytics continues to drive actionable insights',
+      blocks: [
+        {
+          type: 'cards', span: 4, rows: 4, cols: 1, list: true, title: 'Key accomplishments',
+          items: [
+            { icon: 'Landmark', name: 'Daily bank balance model', line: 'Automated cash position', status: 'live', statusText: 'Live' },
+            { icon: 'Wallet', name: 'Cash flow statement model', line: 'Familiarity and user understanding', status: 'live', statusText: 'Live' },
+            { icon: 'Gauge', name: 'F&A SLA dashboard', line: 'Sectional performance tracking', status: 'live', statusText: 'Live' },
           ],
         },
         {
-          type: 'rings', span: 4, rows: 3, size: 92, title: 'Data maturity · next frontier is prescriptive and cognitive',
+          type: 'cards', span: 4, rows: 4, cols: 1, list: true, title: 'Projects in progress',
+          items: [
+            { icon: 'ListChecks', name: 'AR reconciliation dashboard', line: 'With status tracker', status: 'progress' },
+            { icon: 'TrendingUp', name: 'Cash flow management', line: 'Deeper involvement, model improvements', status: 'progress' },
+            { icon: 'ShoppingBag', name: 'Consumer Sales Omnichannel', line: 'Enhanced reporting and insights', status: 'progress' },
+          ],
+        },
+        {
+          type: 'rings', span: 4, rows: 4, size: 92, title: 'Data maturity · next frontier is prescriptive',
           items: [
             { pct: 100, value: '100%', label: 'Descriptive to predictive', sub: 'Hindsight, insight, foresight' },
             { pct: 20, value: '20%', label: 'Prescriptive', sub: 'What should we do?', color: 'accent2' },
             { pct: 5, value: '5%', label: 'Cognitive', sub: 'Controlled execution', color: 'accent2' },
           ],
         },
+      ],
+    },
+    {
+      id: 'rpa', owner: { name: 'Mohamed Nomani', role: 'Capgemini Transformation' }, label: 'Automation', title: 'Digital interventions through RPA and automation',
+      blocks: [
         {
-          type: 'tiles', span: 12, rows: 1, cols: 6, title: 'Maintained · finance operations and control',
+          type: 'hero', items: [
+            { value: '8', label: 'Digital interventions', sub: 'Reporting, payments, matching, extracts' },
+            { value: '1', label: 'Completed', sub: 'Combined TB reports', tone: 'good' },
+            { value: '3', label: 'In progress', sub: 'Payments, PayPro, debit orders' },
+            { value: '4', label: 'In pipeline', sub: 'BTM, age analysis, rebates, NEDLMP', tone: 'warn' },
+          ],
+        },
+        {
+          type: 'cards', span: 12, rows: 4, cols: 4, title: 'Business-led transformation · click for detail',
           items: [
-            { value: 'Travel', label: 'Spend and activity trends', tone: 'green' },
-            { value: 'TBI', label: 'Status and deadlines', tone: 'green' },
-            { value: 'AR recons', label: 'Ageing and unreconciled items', tone: 'green' },
-            { value: 'OMS', label: 'Volumes and turnaround', tone: 'green' },
-            { value: 'TOMS', label: 'Mailbox response times', tone: 'green' },
-            { value: 'SLA', label: 'F&A and HR performance', tone: 'green' },
+            { icon: 'Combine', name: 'Combined TB reports', line: 'Consolidation benefit', status: 'delivered', statusText: 'Completed' },
+            { icon: 'Banknote', name: 'All monthly payments', line: 'Batch files · accuracy and month-end TAT', status: 'progress' },
+            { icon: 'FileStack', name: 'FAS PayPro files', line: 'Improved consolidation', metric: '~8 hours', status: 'progress' },
+            { icon: 'Search', name: 'Debit order look-up', line: 'Increased flow from source', metric: '~8 hours', status: 'progress' },
+            { icon: 'Plane', name: 'Daily BTM files', line: 'Automated daily processing', metric: '~4 h per month', status: 'planned', statusText: 'Pipeline' },
+            { icon: 'CalendarClock', name: 'Age analysis extracts', line: 'SAP extract, format, centralise · peak-period TAT', status: 'planned', statusText: 'Pipeline' },
+            { icon: 'Split', name: 'Rebate split per BU', line: 'Posted in Openserve, carried in Telkom', status: 'planned', statusText: 'Pipeline' },
+            { icon: 'FileSearch', name: 'NEDLMP report extraction', line: 'Bulk view of outstanding uploads', status: 'planned', statusText: 'Pipeline' },
           ],
         },
       ],
     },
     {
-      id: 'rpa', owner: {   "name": "Mohamed Nomani",   "role": "Capgemini Transformation" }, label: 'Automation', title: 'Five bots across reporting, payments and matching',
+      id: 'ai', label: 'Transformation and AI', owner: { name: 'Mohamed Nomani', role: 'Capgemini Transformation' }, title: 'From batch-file bots to AI-assisted reconciliation',
       blocks: [
         {
-          type: 'cards', span: 12, cols: 5, rows: 3, title: 'Automation portfolio · click for detail',
-          items: [
-            { icon: 'FileBarChart', name: 'SLA reporting bot', line: 'Daily and weekly SLA reports', metric: '~416 h/yr', status: 'progress', detail: { text: 'Removes about 8 hours of manual compilation per week. Consistent format, no transcription errors.' } },
-            { icon: 'Banknote', name: 'All Payments bot', line: 'Validation, EFT release, remittances', metric: '4h → 30min', status: 'progress', detail: { text: 'Fraud pre-screening on every payment run.' } },
-            { icon: 'GitCompareArrows', name: 'Debit order matching', line: 'Mandate · bank · GL', metric: '−60% backlog', status: 'progress', detail: { text: 'Three-way match; only exceptions need review. Estimated 60% reduction in open items.' } },
-            { icon: 'Receipt', name: 'VAT correction', line: 'Checks VAT coding before posting', metric: '0 reclasses', status: 'delivered', detail: { text: 'Rules-based validation against SARS requirements on AP invoices.' } },
-            { icon: 'Eraser', name: 'Open item reduction', line: 'Weekly GL matching runs', metric: '<2 months', status: 'planned', detail: { text: 'Pattern-based matching across bank statements, journals and sub-ledgers, with audit trail.' } },
+          type: 'hero', items: [
+            { value: '~20h', label: 'Monthly effort targeted', sub: 'BTM ~4h · PayPro ~8h · debit orders ~8h' },
+            { value: '3', label: 'Analytics models live', sub: 'Bank balance · cash flow · SLA', tone: 'good' },
+            { value: 'UAT done', label: 'Touchless AP', sub: 'Foundation for automated invoice flow', tone: 'good' },
+            { value: 'Next', label: 'AI-assisted reconciliation', sub: 'Rules first, then AI on exceptions' },
           ],
         },
+        { type: 'track', span: 12, rows: 2, title: 'Automation to AI, step by step · where AI-assisted reconciliation is today', at: 1 },
         {
-          type: 'shift', span: 12, rows: 2, title: 'What changes',
-          items: [{ label: 'Payment run cycle', from: '4 hours', to: '<30 min' }, { label: 'Weekly SLA report compilation', from: '8 hours', to: 'Automated' }],
+          type: 'waves', big: true, span: 12, rows: 4, title: 'Capgemini Transformation portfolio · done, under way, next',
+          items: [
+            { when: 'Done · live at Telkom', name: 'Delivered', tone: 'done', items: ['Combined TB reports', 'Touchless AP: UAT completed', 'Bank balance, cash flow and SLA models (with Analytics)'] },
+            { when: 'Under way', name: 'Being delivered now', tone: 'doing', items: ['All monthly payments batch files', 'FAS PayPro files and debit order look-up', 'AR reconciliation dashboard with status tracker'] },
+            { when: 'H2', name: 'What we will prove next', tone: 'next', items: ['Wholesale reconciliation automation, once SingleView and FAM balances are live', 'Rebate split per BU and daily BTM files', 'AI on reconciliation exceptions, proved on one account'] },
+          ],
         },
       ],
     },
     {
-      "id": "ai",
-      "label": "Transformation and AI",
-      "owner": {
-        "name": "Mohamed Nomani",
-        "role": "Capgemini Transformation"
-      },
-      "title": "From payment bots to AI-assisted finance",
-      "blocks": [
-        {
-          "type": "hero",
-          "items": [
-            {
-              "value": "5",
-              "label": "Bots in the portfolio",
-              "sub": "Reporting, payments, matching, VAT",
-              "tone": "good"
-            },
-            {
-              "value": "0",
-              "label": "VAT reclasses",
-              "sub": "VAT correction bot delivered",
-              "tone": "good"
-            },
-            {
-              "value": "4h → 30m",
-              "label": "Payment run target",
-              "sub": "All Payments bot in build"
-            },
-            {
-              "value": "Next",
-              "label": "Reconciliation with AI",
-              "sub": "Rules first, then AI on exceptions"
-            }
-          ]
-        },
-        {
-          "type": "track",
-          "span": 12,
-          "rows": 2,
-          "title": "Automation to AI, step by step · where AI-assisted reconciliation is today",
-          "at": 1
-        },
-        {
-          "type": "waves",
-          "big": true,
-          "span": 12,
-          "rows": 4,
-          "title": "Capgemini Transformation portfolio · done, under way, next 90 days",
-          "items": [
-            {
-              "when": "Done · live at Telkom",
-              "name": "Delivered",
-              "tone": "done",
-              "items": [
-                "VAT correction bot live",
-                "Cash forecasting model with Analytics"
-              ]
-            },
-            {
-              "when": "Under way",
-              "name": "Being delivered now",
-              "tone": "doing",
-              "items": [
-                "SLA reporting bot (~416 hours a year)",
-                "All Payments bot: validation and EFT release",
-                "Debit order matching (mandate, bank, GL)",
-                "Open item reduction runs"
-              ]
-            },
-            {
-              "when": "Next 90 days",
-              "name": "What we will prove next",
-              "tone": "next",
-              "items": [
-                "Define AI on reconciliation exceptions with F&A",
-                "Prove it on one bank account",
-                "Measure open-item ageing"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: 'next', label: 'Way forward', title: 'FY27 roadmap, quarter by quarter',
+      id: 'next', label: 'Way forward', title: 'H2 roadmap and decisions',
       blocks: [
         {
-          type: 'waves', span: 8, rows: 2, title: 'Roadmap',
+          type: 'waves', big: true, span: 8, rows: 4, title: 'H2 roadmap',
           items: [
-            { when: 'Q1 · Jul–Sep', name: 'Reporting', items: ['SLA report automation', 'Open GL ageing reports', 'Open item campaign'] },
-            { when: 'Q2 · Oct–Dec', name: 'Payments and matching', items: ['All Payments bot', 'Debit order matching', 'Cash flow dashboards'] },
-            { when: 'Q3 · Jan–Mar', name: 'Predictive', items: ['13-week cash forecast', 'Reconciliation agent', 'Audit evidence pack'] },
-            { when: 'Q4 · Apr–Jun', name: 'Agent-assisted', items: ['Cash, payments and audit agents', 'Automated reporting', 'AI-assisted year-end'] },
+            { when: 'Reporting and control', name: 'Trusted balances', items: ['SingleView balance report adopted', 'Group Revenue Assurance reports on time', 'BTM travel claims rejection dashboard'] },
+            { when: 'Reconciliation', name: 'Fewer open items', items: ['Wholesale reconciliation automation', 'Recoverable works with regional SPOCs', 'AR reconciliation tracker live'] },
+            { when: 'Spend and contracts', name: 'Tighter spend', items: ['Reduce R1 contracts', 'OMS contracts to cheaper data deals (~R300k per month target)', 'Automated rebate split per BU'] },
           ],
         },
         {
-          type: 'asks', span: 4, rows: 2, title: 'Decisions requested from Telkom',
-          items: ['Agree the benefit baseline per automation', 'Confirm Q2 dates: payments and debit orders', 'Enable Microsoft enterprise AI access for the Shared Services team', 'Agree the AI-on-reconciliation use case'],
+          type: 'asks', span: 4, rows: 4, title: 'Decisions requested from Telkom',
+          items: [
+            { text: 'Confirm SingleView and FAM balance report timing', sub: 'Wholesale reconciliation automation depends on them' },
+            { text: 'Name regional SPOCs for recoverable works', sub: 'To clear unidentified balances before close' },
+            { text: 'Agree the benefit baseline per automation', sub: 'So hours saved are measured, not estimated' },
+            { text: 'Enable Microsoft enterprise AI access for Shared Services', sub: 'For AI on reconciliation exceptions' },
+          ],
         },
       ],
     },
