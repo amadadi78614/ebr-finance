@@ -420,7 +420,7 @@ function Agenda({ b }) {
     <Card b={b} className="agenda-card">
       <div className={'agenda' + (b.items.length > 7 ? ' many' : '')}>
         {b.items.map((x, n) => (
-          <a key={x.label} href={'#' + x.tab} className="ag-row" style={{ animationDelay: `${n * 110}ms` }}>
+          <a key={x.label} href={'#' + (x.tab.includes('/') || !b._d ? x.tab : b._d + '/' + x.tab)} className="ag-row" style={{ animationDelay: `${n * 110}ms` }}>
             <span className="ag-n">{String(n + 1).padStart(2, '0')}</span>
             <span className="ag-ico"><Icon name={x.icon} size={26} /></span>
             <span className="ag-txt"><b>{x.label}</b>{x.line && <small>{x.line}</small>}</span>

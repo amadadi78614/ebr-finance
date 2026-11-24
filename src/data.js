@@ -16,9 +16,9 @@ const CONFIG = {
           { label: 'Since last EBR', icon: 'History', tab: 'since', line: 'Commitments from May/June 2026, and where each stands now' },
           { label: 'H1 highlights', icon: 'Star', tab: 'highlights', line: 'Interim close, Touchless AP UAT, 58% of FAM backlog closed, audit findings closed' },
           { label: 'H2 focus areas', icon: 'Target', tab: 'focus', line: 'SingleView balances, wholesale recons, recoverable works, R1 contracts' },
-          { label: 'Analytics', icon: 'BarChart3', tab: 'analytics', line: 'Bank balance, cash flow and SLA models live · AR recon tracker next', who: 'Capgemini Analytics' },
           { label: 'Automation', icon: 'Bot', tab: 'rpa', line: 'Eight digital interventions: one completed, three in progress, four in pipeline', who: 'Capgemini Transformation' },
           { label: 'Transformation and AI', icon: 'Sparkles', tab: 'ai', line: 'From batch-file bots to AI-assisted reconciliation', who: 'Capgemini Transformation' },
+          { label: 'Analytics', icon: 'BarChart3', tab: 'analytics', line: 'Bank balance, cash flow and SLA models live · AR recon tracker next', who: 'Capgemini Analytics' },
           { label: 'Way forward', icon: 'Route', tab: 'next', line: 'H2 roadmap and decisions requested from Telkom' },
         ],
       }],
@@ -57,7 +57,7 @@ const CONFIG = {
             { icon: 'FileCheck2', name: 'Touchless AP invoice processing', line: 'UAT completed', status: 'live', statusText: 'UAT done', detail: { text: 'Positions the business for greater automation, scalability and less manual intervention.' } },
             { icon: 'Wrench', name: 'FAM incidents', line: '58% of the backlog resolved', status: 'progress', statusText: '58% closed', detail: { text: 'Lower operational risk and better control effectiveness, improving process stability and business continuity.' } },
             { icon: 'HardHat', name: 'Recoverable works', line: 'Centralised visibility', status: 'live', statusText: 'Live', detail: { text: 'Proactive management of receivables and clearer operational accountability.' } },
-            { icon: 'LifeBuoy', name: 'Finance portal self-help', line: 'New self-service functions', status: 'live', statusText: 'Live', detail: { text: 'Better user experience, fewer support requests and higher operational efficiency.' } },
+            { icon: 'LifeBuoy', name: 'Web portal self-help', line: 'New self-service functions in the Finance Portal', status: 'live', statusText: 'Live', detail: { text: 'Better user experience, fewer support requests and higher operational efficiency.' } },
             { icon: 'ShieldCheck', name: 'Risk management and compliance', line: 'Business process audit findings closed', status: 'live', statusText: 'Closed', detail: { text: 'Capgemini closed the business process audit findings, strengthening the control environment and compliance.' } },
           ],
         },
@@ -180,4 +180,6 @@ const CONFIG = {
     },
   ],
 }
+const ORDER = ['agenda', 'since', 'highlights', 'focus', 'rpa', 'ai', 'analytics', 'next']
+CONFIG.tabs = ORDER.map(id => CONFIG.tabs.find(t => t.id === id))
 export default CONFIG
