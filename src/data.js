@@ -15,7 +15,7 @@ const CONFIG = {
         type: 'agenda', span: 12, rows: 6, items: [
           { label: 'Since last EBR', icon: 'History', tab: 'since', line: 'Commitments from May/June 2026, and where each stands now' },
           { label: 'H1 highlights', icon: 'Star', tab: 'highlights', line: 'Interim close, Touchless AP UAT, 58% of FAM backlog closed, audit findings closed' },
-          { label: 'H2 focus areas', icon: 'Target', tab: 'focus', line: 'SingleView balances, wholesale recons, recoverable works, R1 contracts' },
+          { label: 'H2 focus areas', icon: 'Target', tab: 'focus', line: 'SingleView balances, balance sheet recons, recoverable works, R1 contracts' },
           { label: 'Automation', icon: 'Bot', tab: 'rpa', line: 'Eight digital interventions: one completed, three in progress, four in pipeline', who: 'Capgemini Transformation' },
           { label: 'Transformation and AI', icon: 'Sparkles', tab: 'ai', line: 'From batch-file bots to AI-assisted reconciliation', who: 'Capgemini Transformation' },
           { label: 'Analytics', icon: 'BarChart3', tab: 'analytics', line: 'Bank balance, cash flow and SLA models live · AR recon tracker next', who: 'Capgemini Analytics' },
@@ -41,7 +41,7 @@ const CONFIG = {
             { icon: 'Wallet', label: 'Cash flow dashboards', then: 'Q2 commitment', now: 'Bank balance and cash flow models live', status: 'live', detail: { text: 'Daily bank balance model automates the cash position; the cash flow statement model builds familiarity and user understanding.' } },
             { icon: 'Banknote', label: 'All Payments', then: 'Q2 commitment', now: 'Batch files in progress', tone: 'warn', status: 'progress', detail: { text: 'All monthly payments batch files: improved accuracy and TAT saving over month-end.' } },
             { icon: 'GitCompareArrows', label: 'Debit order matching', then: 'Q2 commitment', now: 'Debit order look-up in progress', tone: 'warn', status: 'progress', detail: { text: 'Increased flow from source, about 8 hours saved.' } },
-            { icon: 'CalendarClock', label: 'Open GL ageing reports', then: 'Q1 commitment', now: 'Age analysis extracts in pipeline', tone: 'muted', status: 'planned', detail: { text: 'SAP extract, format and centralise; supports client turnaround over peak periods.' } },
+            { icon: 'CalendarClock', label: 'Open GL ageing reports', then: 'Q1 commitment', now: 'Age analysis extracts in pipeline', status: 'planned', detail: { text: 'SAP extract, format and centralise; supports client turnaround over peak periods.' } },
             { icon: 'FileCheck2', label: 'Touchless AP invoice processing', then: 'Planned', now: 'UAT completed', status: 'live' },
           ],
         },
@@ -70,7 +70,7 @@ const CONFIG = {
           type: 'cards', span: 12, rows: 6, cols: 3, title: 'Key focus areas H2 · click for detail',
           items: [
             { icon: 'Scale', name: 'SingleView balance report', line: 'Stabilise, validate, adopt', status: 'progress', detail: { text: 'Support stabilisation, validation and adoption of SingleView balance reporting as a critical source of financial insight.' } },
-            { icon: 'GitCompareArrows', name: 'Wholesale reconciliations', line: 'Automate', status: 'planned', detail: { text: 'Less manual effort and better financial accuracy. Revisit once SingleView and FAM balance reports are deployed.' } },
+            { icon: 'GitCompareArrows', name: 'Balance sheet reconciliations', line: 'Automate', status: 'planned', detail: { text: 'Less manual effort and better financial accuracy. Revisit once SingleView and FAM balance reports are deployed.' } },
             { icon: 'Plane', name: 'BTM rejection dashboard', line: 'Travel claims analytics', status: 'planned', detail: { text: 'Visibility of claim rejections and compliance trends to improve spend governance.' } },
             { icon: 'HardHat', name: 'Recoverable works with regional SPOCs', line: 'Cross-functional accountability', status: 'progress', detail: { text: 'Improve recoverability and minimise unidentified balances that affect financial close.' } },
             { icon: 'ClipboardCheck', name: 'Group Revenue Assurance alignment', line: 'Reports on time', status: 'progress', detail: { text: 'Timely reporting and more effective back-office resolution.' } },
@@ -151,7 +151,7 @@ const CONFIG = {
           items: [
             { when: 'Done · live at Telkom', name: 'Delivered', tone: 'done', items: ['Combined TB reports', 'Touchless AP: UAT completed', 'Bank balance, cash flow and SLA models (with Analytics)'] },
             { when: 'Under way', name: 'Being delivered now', tone: 'doing', items: ['All monthly payments batch files', 'FAS PayPro files and debit order look-up', 'AR reconciliation dashboard with status tracker'] },
-            { when: 'H2', name: 'What we will prove next', tone: 'next', items: ['Wholesale reconciliation automation, once SingleView and FAM balances are live', 'Rebate split per BU and daily BTM files', 'AI on reconciliation exceptions, proved on one account'] },
+            { when: 'H2', name: 'What we will prove next', tone: 'next', items: ['Balance sheet reconciliation automation, once SingleView and FAM balances are live', 'Rebate split per BU and daily BTM files', 'AI on reconciliation exceptions, proved on one account'] },
           ],
         },
       ],
@@ -163,14 +163,14 @@ const CONFIG = {
           type: 'waves', big: true, span: 8, rows: 4, title: 'H2 roadmap',
           items: [
             { when: 'Reporting and control', name: 'Trusted balances', items: ['SingleView balance report adopted', 'Group Revenue Assurance reports on time', 'BTM travel claims rejection dashboard'] },
-            { when: 'Reconciliation', name: 'Fewer open items', items: ['Wholesale reconciliation automation', 'Recoverable works with regional SPOCs', 'AR reconciliation tracker live'] },
+            { when: 'Reconciliation', name: 'Fewer open items', items: ['Balance sheet reconciliation automation', 'Recoverable works with regional SPOCs', 'AR reconciliation tracker live'] },
             { when: 'Spend and contracts', name: 'Tighter spend', items: ['Reduce R1 contracts', 'OMS contracts to cheaper data deals (~R300k per month target)', 'Automated rebate split per BU'] },
           ],
         },
         {
           type: 'asks', span: 4, rows: 4, title: 'Decisions requested from Telkom',
           items: [
-            { text: 'Confirm SingleView and FAM balance report timing', sub: 'Wholesale reconciliation automation depends on them' },
+            { text: 'Confirm SingleView and FAM balance report timing', sub: 'Balance sheet reconciliation automation depends on them' },
             { text: 'Name regional SPOCs for recoverable works', sub: 'To clear unidentified balances before close' },
             { text: 'Agree the benefit baseline per automation', sub: 'So hours saved are measured, not estimated' },
             { text: 'Enable Microsoft enterprise AI access for Shared Services', sub: 'For AI on reconciliation exceptions' },
